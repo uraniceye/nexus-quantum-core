@@ -1,0 +1,31 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexus-quantum-core"
+version = "1.0.0"  # [重要] 每次更新库时，都应该增加这个版本号
+authors = [
+  { name="跳舞的火公子", email="your-email@example.com" },
+]
+description = "Core quantum simulation library for the NEXUS Quantum Defense project."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Security",
+]
+dependencies = [
+    "numpy>=1.21.0",
+    "scipy",          # 如果 QuantumState 内部使用了 scipy.sparse
+    # "cupy-cuda11x", # CuPy 是可选的，并且依赖特定的CUDA版本，通常不建议作为硬依赖
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/nexus-quantum-core"
+Issues = "https://github.com/your-username/nexus-quantum-core/issues"
